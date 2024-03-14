@@ -1,0 +1,57 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Simple Table</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        Birth Year
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Gender
+                                    </th>
+                                    <th>
+                                        Height
+                                    </th>
+                                    <th>
+                                        Hair Color
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let person of data">
+                                        <td>
+                                            {{ person.birthYear !== 'n/a' && person.birthYear !== 'none' ? person.birthYear : '--' }}
+                                        </td>
+                                        <td>
+                                            {{ person.name !== 'n/a' && person.name !== 'none' ? person.name : '--' }}
+                                        </td>
+                                        <td>
+                                            {{ person.gender !== 'n/a' && person.gender !== 'none' ? person.gender : '--' }}
+                                        </td>
+                                        <td>
+                                            {{ person.height !== 'n/a' && person.height !== 'none' ? person.height + 'm' : '--' }}
+                                        </td>
+                                        <td class="text-primary">
+                                            {{ person.hairColor !== 'n/a' && person.hairColor !== 'none' ? person.hairColor : '--' }}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
